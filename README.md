@@ -92,6 +92,16 @@ Creates the Virtual Private Cloud with subnets, route tables, internet gateway, 
 ### EC2 (ec2.tf)
 Provisions EC2 instances with security groups, network interfaces, and related resources.
 
+## Visualize the Infrastructure
+
+To visualize the infrastructure, you can use the Terraform output command:
+
+```
+terraform plan -out=plan.out
+terraform show -json plan.out > plan.json
+```
+Then upload the plan.json to [https://hieven.github.io/terraform-visual/](https://hieven.github.io/terraform-visual/)
+
 ## Best Practices
 
 - Never commit `terraform.tfvars` with sensitive information
